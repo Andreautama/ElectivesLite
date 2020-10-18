@@ -32,49 +32,30 @@ aside{
 footer{
 	clear: both;
 }
+
 #aside-title{
 	text-align : left;
 }
-aside#indo-food-collage{
+aside#nasi-goreng{
 	padding-left: 500px;
 	display: block;
 }
 
 .main-header{
-	font-size: 40px;
+	font-size : 45 px;
+	background-color: #4CAF50;
+	color : #f2f2f2;
 }
+.desc{
+	background-color: rgb(195,195,195,0.3);
+}
+.edit{
+	background-color: #4CAF50;
+	font-size : 35 px;
+	color : white;
+	text-decoration : none;
+	font-weight :bold;
+  padding: 5px 5px;
+}
+
   
-table{
-	width:100%;
-	table-layout: fixed;
-}
-th{
-	border-bottom: rgb(0,171,16) solid 5px ;
-	text-align: left;
-	font-size: 25px;
-}
-
-td.data{
-	background-color:rgb(195,195,195);
-	color: black;
-}
-
-td#name{
-	text-align: left;
-}
-
-td#price{
-	text-align: left;
-}
-
-td.option a{
-	text-decoration: none;
-	color: white;	
-	padding: 5px 5px;
-	text-align: center;
-	display: inline-block;
-	background-color:#4CAF50;
-}
-td.option a:hover{
-	background-color:rgb(239,40,54);
-}
