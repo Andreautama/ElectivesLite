@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoFood</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="<%= url('show.css') %>"/>
+</head>
+<body>
+<header>
+    <div class="header-logo">
+        <img id="logo-gofood" src="images/go-food.png" alt="logo gofood" width="30%">
+    </div>
+    <nav>
+        <a href="#home">Home</a> 
+        <a href="#Menu" class="active">Menu</a> 
+        <a href="#Promo&disc">Promo & Discounts</a> 
+        <a href="#Aboutus">About us</a>   
+    </nav>        
+</header>
+
+<main>	
+	<div>
+	<h1 class="main-header"><%= items.name %></h1>
+	<p>Rp <%= items.price %></p>
+	<p id="rate"> Rate&nbsp;&nbsp;&nbsp;&#9733;&#9733;&#9733;&#9733;&#9733; </p>
+	</div>
+</main>
+		
+<aside>
+	<h1 id="aside-title"> </h1>
+	<img src="/images/nasi-goreng.jpg" id="nasi-goreng" alt="nasi-goreng" width="300px">
+	<br><br><br>
+	<a href="/items/update" class="edit" style="background-color: #4CAF50;
+	color: #f2f2f2;
+	text-decoration: none;
+	font-weight: bold; padding : 5px 5px "> Edit </a>
+</aside>
+
+</body>
+
+
+</html>

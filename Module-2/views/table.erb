@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoFood</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="<%= url('table.css') %>"/>
+</head>
+<body>
+<header>
+    <div class="header-logo">
+        <img id="logo-gofood" src="images/go-food.png" alt="logo gofood" width="30%">
+    </div>
+    <nav>
+        <a href="#home">Home</a> 
+        <a href="#Menu" class="active">Menu</a> 
+        <a href="#Promo&disc">Promo & Discounts</a> 
+        <a href="#Aboutus">About us</a>   
+    </nav>        
+</header>
+<main>
+	<h1 class="main-header">List of Items</h1>
+	<table>
+		<thead>
+			<tr class="header-table">
+				<th>Name</th>
+				<th>Price</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% items.each do |item| %>
+			<tr>
+				<td class="data" id="name"><%= item.name %></td>
+				<td class="data" id="price"><%= item.price %></td>	
+				<td class="option">
+					<a href="/<%= item.id %>">Show</a>
+					<a href="/edit/<%= item.id %>">Edit</a></td>
+				<td><form action="/<%= item.id %>" method="POST">
+						<input type="hidden" name="_method" value="DELETE">
+						<input type="submit" value="Destroy">
+				  	</form>
+				</td>
+			</tr>
+			<% end %>			
+		</tbody>
+	</table>
+</main>
+<aside>
+	<h1 id="aside-title"></h1>
+	<img src="images/collage.jpg" id="indo-food-collage" alt="kumpulan-foto-makanan-Indonesia" width="300px">
+</aside>
+</body>
+
+
+</html>
