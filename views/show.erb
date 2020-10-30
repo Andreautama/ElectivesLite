@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoFood</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="<%= url('show.css') %>"/>
+</head>
+<body>
+	<header>
+		<div class="header-logo">
+			<img id="logo-gofood" src="images/go-food.png" alt="logo gofood" width="30%">
+		</div>
+		<nav>
+			<a href="#home" >Home</a> 
+			<a href="#Menu" class="active">Menu</a> 
+			<a href="#Promo&disc">Promo & Discounts</a> 
+			<a href="#Aboutus">About us</a>   
+		</nav>        
+	</header>
+
+	<main style="padding-top:20px;">	
+		<div class="details">
+		<% detail_items.each do |detail_item| %>
+		<h1 class="main-header" id="name" value="<%= detail_item.id %>"><%= detail_item.name %></h1>
+		<p id = "price">Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Rp <%= detail_item.price %></p>
+		<p id="category"> Category :&nbsp;<%= detail_item.category.category_name %>  </p>
+		<% end %>
+		</div><br><br>
+		<a href="/edit/:id" class="edit"> Edit </a>
+	</main>
+			
+	<aside>
+		<h1 id="aside-title"> </h1>
+		<img src="/images/nasi-goreng.jpg" id="nasi-goreng" alt="nasi-goreng" width="300px" style="padding: 20px 30px;">
+		<br><br><br>
+		
+	</aside>
+</body>
+</html>
