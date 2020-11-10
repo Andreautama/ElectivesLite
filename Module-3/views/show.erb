@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoFood</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="<%= URI('show.css') %>"/>
+</head>
+<body>
+	<header>
+		<div class="header-logo">
+			<img id="logo-gofood" src="images/go-food.png" alt="logo gofood" width="30%">
+		</div>
+		<nav>
+			<a href="/table" class="active">Menu</a> 
+			<a href="/customer">Customer</a> 
+			<a href="/category">Category</a> 
+			<a href="/order">Order</a>  
+		</nav>        
+	</header>
+
+	<main style="padding-top:20px;">	
+		<div class="details">
+		<% items.each do |item| %>
+		<h1 class="main-header" id="name" value="<%= item.item_id %>"><%= item.name %></h1>
+		<p id = "price">Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Rp <%= item.price %></p>
+		<p id="category"> Category :&nbsp;<%= item.categories %></p>
+		
+		</div><br><br>
+		<a href="/edit/<%= item.item_id %>" class="edit"> Edit </a>
+		<% end %>
+	</main>
+			
+	<aside>
+		<h1 id="aside-title"> </h1>
+		<img src="/images/nasi-goreng.jpg" id="nasi-goreng" alt="nasi-goreng" width="300px" style="padding: 20px 30px;">
+		<br><br><br>
+		
+	</aside>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoFood</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="<%= URI('/form.css') %>">
+</head>
+<body>
+	<header>
+		<div class="header-logo">
+			<img id="logo-gofood" src="/images/go-food.png" alt="logo gofood" width="30%">
+		</div>
+		<nav>
+			<a href="/table" class="active">Menu</a> 
+			<a href="/customer">Customer</a> 
+			<a href="/category">Category</a> 
+			<a href="/order">Order</a>  
+		</nav>       
+	</header>
+
+	<main>
+	<h1 class="main-header">New Menu</h1>
+	
+	<form action="/items/create" method="POST" id="create-menu">
+		<fieldset>
+			<br>
+			<label for="Name">Name &nbsp;&nbsp;&nbsp;</label>
+			<input type="text" placeholder="e.g : Nasi Goreng" id="item-name" name="item_name" style="height : 30px;"> <br><br>
+			<label for="Price">Price &nbsp;&nbsp;&nbsp;</label>
+			<input type="text" placeholder="e.g : 10000" id="item-price" name="item_price" style="height : 30px;"><br><br>
+			<div class="categories-select"> 
+			<label for="categories">Choose the category:</label>
+				<select id="item-categories" name="item_categories" form="create-menu">
+				<% categories.each do |category| %>
+					<option value="<%= category.category_id %>"><%= category.category_name %></option>
+				<% end %>
+				</select>
+			  </div> <br><br>
+			<input type="Submit" value="Create Item" class="create-item">
+		</fieldset>
+	</form>
+	<br><br><br>
+	<a href="/menu" class="home"> Back </a>
+	</main>
+</body>
+</html>
+

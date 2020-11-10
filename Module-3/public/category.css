@@ -1,0 +1,139 @@
+body{
+	font-family: Verdana, sans-serif;
+	padding : 20px 50px;
+}
+
+nav {
+	overflow: hidden;
+	background-color: #333;
+}
+nav a{
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+nav a:hover {
+	background-color:rgb(239,40,54);
+}
+nav a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+main{
+	float: right;
+	width: 100%;
+}
+
+.main-header{
+	font-size : 45 px;
+	background-color:rgb(76,175,80,0.8);
+	color : black;
+}
+.home{
+	background-color: #4CAF50;
+	font-size : 35 px;
+	color : white;
+	text-decoration : none;
+	font-weight :bold;
+  	padding: 5px 5px;
+}
+table{
+	width:90%;
+	table-layout: fixed;
+}
+th{
+	border-bottom: rgb(0,171,16) solid 5px ;
+	text-align: left;
+	font-size: 25px;
+}
+
+td.data{
+	background-color:rgb(195,195,195);
+	color: black;
+	padding-left: 10px;
+}
+
+td#cat_id{
+	text-align: left;
+}
+
+td#cat_name{
+	text-align: left;
+}
+
+td.option, th.option{
+	width: 140px;
+}
+
+td.option a{
+	text-decoration: none;
+	color: white;	
+	padding: 5px 5px;
+	text-align: center;
+	display: inline-block;
+	background-color:#4CAF50;
+}
+div.action{
+	float: right;
+}
+td input[type=submit]{
+	border: none;
+	color: white;	
+	padding: 5px 5px;
+	text-align: center;
+	background-color:rgb(239,40,54);
+	font-family: Verdana, sans-serif;
+	display: inline-block;
+}
+
+td a:hover{
+	background-color:rgb(239,40,54);
+}
+
+fieldset{
+	background-color: rgb(195,195,195,0.3);
+}
+#category-name{
+    width: 200px;
+ }
+ 
+.create-category{
+	color: black;
+	font-family: Verdana, sans-serif;
+	font-weight : bold;
+	width : 150px;
+	height : 30px;
+	border-radius: 5px;
+	border-color : #4CAF50;
+	background-color: #4CAF50;
+}
+
+.create-category:active{
+	background-color: rgb(239,40,54);
+	color:black;
+}
+
+.update-category{
+	color: black;
+	font-family: Verdana, sans-serif;
+	font-weight : bold;
+	width : 120px;
+	height : 30px;
+	border-radius: 5px;
+	border-color : #4CAF50;
+	background-color: #4CAF50;
+}
+
+.update-category:active{
+	background-color: rgb(239,40,54);
+	color:black;
+}
+a .home{
+	background-color: #4CAF50;
+	color: #f2f2f2;
+	text-decoration: none;
+	font-weight: bold;
+}

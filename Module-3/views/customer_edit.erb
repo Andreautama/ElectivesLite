@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoFood</title>
+	<meta charset="UTF-8">
+	
+
+	<link rel="stylesheet" type ="text/css" href="<%= URI('/customer.css') %>">
+</head>
+<body>
+	<header>
+		<div class="header-logo">
+			<img id="logo-gofood" src="images/go-food.png" alt="logo gofood" width="30%">
+		</div>
+		<nav>
+			<a href="/menu" >Menu</a> 
+			<a href="/customer" class="active">Customer</a> 
+			<a href="/category">Category</a> 
+			<a href="/order">Order</a>   
+		</nav>        
+	</header>
+	<main>
+	h1 class="main-header">Update Customer/h1>
+    <form action="/edit/<%=customer.customer_id %>" method="POST" id="update-customer">
+		<fieldset>
+            <br>
+            <% customer_details.each do |detail| %>
+                <input type="hidden" name="customerid" value="<%= detail.id %>">
+			    <label for="Name">Change customer Name to &nbsp;&nbsp;&nbsp;</label>
+				<input type="text" placeholder="e.g : Andy Liew" id="customer-name" name="customer_name" style="height : 30px;" value="<%= detail.name %>"> <br><br>
+				<label for="Name">Change Phone number to &nbsp;&nbsp;&nbsp;</label>
+			    <input type="text" placeholder="e.g : +628136475938" id="customer-name" name="customer_phone" style="height : 30px;" value="<%= detail.phone %>"> <br><br>
+            <% end %>
+                <input type="Submit" value="Update customer">
+		</fieldset>
+	</form>
+	</main>
+</body>
+</html>

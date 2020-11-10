@@ -1,0 +1,117 @@
+body{
+	font-family: Verdana, sans-serif;
+	padding : 20px 50px;
+}
+
+nav {
+	overflow: hidden;
+	background-color: #333;
+}
+nav a{
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+nav a:hover {
+	background-color:rgb(239,40,54);
+}
+nav a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+main{
+	float: right;
+	width: 100%;
+}
+
+#aside-title{
+	text-align : left;
+}
+aside#indo-food-collage{
+	display: block;
+}
+
+.main-header{
+	font-size: 40px;
+}
+  
+table{
+	width:70%;
+	table-layout: fixed;
+}
+th{
+	border-bottom: rgb(0,171,16) solid 5px ;
+	text-align: left;
+	font-size: 25px;
+}
+
+td.data{
+	background-color:rgb(195,195,195);
+	color: black;
+	padding-left: 10px;
+}
+
+td#name{
+	text-align: left;
+}
+
+td#phone{
+	text-align: left;
+}
+
+td.option, th.option{
+	width: 50px;
+}
+
+td.option a, .new-feature{
+	text-decoration: none;
+	color: white;	
+	padding: 5px 5px;
+	text-align: center;
+	display: inline-block;
+	background-color:#4CAF50;
+}
+div.action{
+	float: right;
+}
+.delete-customer{
+	border: none;
+	color: white;	
+	padding: 5px 5px;
+	text-align: center;
+	background-color:rgb(239,40,54);
+	font-family: Verdana, sans-serif;
+	display: inline-block;
+}
+
+td a:hover{
+	background-color:rgb(239,40,54);
+}
+
+fieldset{
+	background-color: rgb(195,195,195,0.3);
+}
+#customer-name{
+    width: 200px;
+ }
+ 
+.create-customer{
+	color: black;
+	font-family: Verdana, sans-serif;
+	font-weight : bold;
+	width : 120px;
+	height : 30px;
+	border-radius: 5px;
+	border-color : #4CAF50;
+	background-color:#4CAF50;
+}
+
+.create-category:active{
+	background-color: rgb(239,40,54);
+	color:black;
+}
+
+

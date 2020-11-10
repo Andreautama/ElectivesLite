@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoFood</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="<%= URI('show.css') %>"/>
+</head>
+<body>
+	<header>
+		<div class="header-logo">
+			<img id="logo-gofood" src="images/go-food.png" alt="logo gofood" width="30%">
+		</div>
+		<nav>
+            <a href="/menu" >Menu</a> 
+            <a href="/customer">Customer</a> 
+            <a href="/category" class="active">Category</a> 
+            <a href="/order">Order</a>   
+		</nav>        
+	</header>
+
+    <main style="padding-top:20px;">	
+        <table>
+        <% category_details.each do |detail| %>
+            <tr>
+                <th>Name</th>
+                <td value="<%= detail.category_id %>"><%= detail.category_name %></td>
+            </tr>
+            <tr>
+                <th>Included Items</th>
+                <td><%= detail.items %></td>
+            </tr>
+        
+        </table>
+            <% if !items.empty? %>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% items.each do |item| %>
+                        <tr>
+                            <td><%= item.name %></td>
+                            <td>Rp <%= item.price %>,00</td>
+                        </tr>
+                    <% end %>
+                </tbody>
+        </table>
+                
+            <% else  %>
+                <div></div>
+            <% end %>
+    <% end %>
+    </main>
+			
+	<aside>
+		
+	</aside>
+</body>
+</html>
