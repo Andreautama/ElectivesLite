@@ -92,4 +92,8 @@ FROM orders o
 JOIN customer c on o.customer_id = c.customer_id
 JOIN order_details od on od.order_id = o.order_id
 JOIN item i on od.item_id = i.item_id
+<<<<<<< HEAD
 GROUP BY o.order_id;
+=======
+GROUP BY o.order_id;
+>>>>>>> 41c988bc52de8efb6f418acd7df782d872664d36

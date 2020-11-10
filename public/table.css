@@ -1,5 +1,6 @@
 body{
 	font-family: Verdana, sans-serif;
+	padding : 20px 50px;
 }
 
 nav {
@@ -34,7 +35,6 @@ aside{
 	text-align : left;
 }
 aside#indo-food-collage{
-	padding-left: 500px;
 	display: block;
 }
 
@@ -73,6 +73,17 @@ td.option a{
 	display: inline-block;
 	background-color:#4CAF50;
 }
-td.option a:hover{
+
+input[type=submit]{
+	border: none;
+	color: white;	
+	padding: 5px 5px;
+	text-align: center;
+	background-color:rgb(239,40,54);
+	font-family: Verdana, sans-serif;
+	display: inline-block;
+}
+
+td a:hover{
 	background-color:rgb(239,40,54);
 }

@@ -1,0 +1,28 @@
+<DOCTYPE html>
+    <head>
+        <title>Item List</title>
+        <link rel="stylesheet" href="<%= url('style.css') %>"/>
+    </head>
+    <body>
+        <h1 class="red-background">Item</h1>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th colspan="3"></th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <% items.each do |item| %>
+                        <tr>
+                            <td><%= item.name %></td>
+                            <td><%= item.price %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+            <a href ="/items/new"> New Item</a>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoFood</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="<%= url('edit.css') %>">
+</head>
+<body>
+	<header>
+		<div class="header-logo">
+			<img id="logo-gofood" src="/images/go-food.png" alt="logo gofood" width="30%">
+		</div>
+		<nav>
+			<a href="#home">Home</a> 
+			<a href="#Menu" class="active">Menu</a> 
+			<a href="#Promo&disc">Promo & Discounts</a> 
+			<a href="#Aboutus">About us</a>   
+		</nav>       
+	</header>
+
+	<main>
+	<h1 class="main-header">Update Menu</h1>
+	<fieldset>
+	<% all_items.each do |item| %>
+	<form action="/edit/<%= item.id %>" method="POST" id="update-menu">
+			<br>
+			<input type="hidden" name="item_id" value="<%= item.id %>">
+			<label for="Name">Name &nbsp;&nbsp;&nbsp;</label>
+			<input type="text" placeholder="e.g : Nasi Goreng" id="item-name" name="item_name" value="<%= item.name %>" > <br><br>
+		
+			<label for="Price">Price &nbsp;&nbsp;&nbsp;</label>
+			<input type="text" placeholder="e.g : 10000" id="item-price" name="item_price" value="<%= item.price %>"><br><br>
+	
+			<div class="categories-select"> 
+			<label for="categories">Choose the category:</label>
+				<select id="item-categories" name="item_categories" form="update-menu">
+					<% categories.each do |category| %>
+						<option value="<%= category.category_id %>"> <%= category.category_name %> </option>
+					<% end %>
+				</select>
+			  </div> <br>
+			  
+			  <input type="Submit" value="Update Item" class="update-item"> <br>
+		<% end %>
+		</fieldset>
+	</form>
+	<br><br><br>
+	<a href="/table" class="home"> Back </a>
+	</main>
+</body>
+</html>
+
