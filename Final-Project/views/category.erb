@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoFood</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="<%= URI('/category.css') %>">
+</head>
+<body>
+	<header>
+		<div class="header-logo">
+			<img id="logo-gofood" src="/images/go-food.png" alt="logo gofood" width="30%">
+		</div>
+		<nav>
+			<a href="/menu" >Menu</a> 
+			<a href="/customer" >Customer</a> 
+			<a href="/category" class="active">Category</a> 
+			<a href="/order">Order</a>   
+		</nav>       
+	</header>
+
+	<main>
+	<h1 class="main-header">List of Categories</h1>
+	
+    <table>
+			<thead>
+				<tr class="header-table">
+					<th>Category ID</th>
+					<th>Category Name</th>
+					<th class="option"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% categories.each do |category| %>
+				<tr>
+					<td class="data" id="cat_id"><%= category.category_id %></td>
+					<td class="data" id="cat_name"><%= category.category_name %></td>
+					
+					<td class="option">
+						<div class="action">
+							<a href="/show-category/<%=category.category_id %>">Show</a> &nbsp;
+							<a href="/edit-category/<%=category.category_id %>">Edit</a> &nbsp;
+							</td> 
+						</div>
+					<td><form action="/delete-category/<%=category.category_id %>" method="POST">
+							<input type="hidden" name="_method" value="Delete">
+							<input type="submit" value="Delete">
+						</form>
+					</td>
+				</tr>
+				<% end %>	
+			</tbody>
+		</table>
+		<br>
+		<br>
+
+	<h1 class="main-header">New Category</h1>
+	
+	<form action="/category" method="POST" id="create-category">
+		<fieldset>
+			<br>
+			<label for="Name">Category Name &nbsp;&nbsp;&nbsp;</label>
+			<input type="text" placeholder="e.g : Main Dish" id="category-name" name="category_name" style="height : 30px;"> <br><br>
+			<input type="Submit" value="Create Category" class="create-category">
+		</fieldset>
+	</form>
+    <br>
+
+	<a href="/menu" class="home"> Back </a>
+	</main>
+</body>
+</html>
+

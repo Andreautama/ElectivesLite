@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoFood</title>
+	<meta charset="UTF-8">
+	
+
+	<link rel="stylesheet" type ="text/css" href="<%= URI('/table.css') %>">
+</head>
+<body>
+	<header>
+		<div class="header-logo">
+			<img id="logo-gofood" src="images/go-food.png" alt="logo gofood" width="30%">
+		</div>
+		<nav>
+			<a href="/menu" class="active">Menu</a> 
+			<a href="/customer">Customer</a> 
+			<a href="/category">Category</a> 
+			<a href="/order">Order</a>   
+		</nav>        
+	</header>
+	<main>
+		<h1 class="main-header">List of Items</h1>
+		<table>
+			<thead>
+				<tr class="header-table">
+					<th>Name</th>
+					<th>Price</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% items.each do |item| %>
+				<tr>
+					<td class="data" id="name"><%= item.name %></td>
+					<td class="data" id="price"><%= item.price %></td>
+					<div class="action">
+						<td class="option">
+							<a href="/<%= item.item_id %>">Show</a> &nbsp;
+							<a href="/edit/<%= item.item_id %>">Edit</a> &nbsp;
+							<a href="/order>">Cart</a> &nbsp;
+							</td> 
+							
+					</div>
+					<td><form action="/delete/<%= item.item_id %>" method="POST">
+							<input type="hidden" name="_method" value="Delete">
+							<input type="submit" value="Destroy">
+						</form>
+					</td>
+				</tr>
+				<% end %>	
+			</tbody>
+		</table>
+		
+	</main>
+	<aside>
+		<h1 id="aside-title"></h1>
+		<img src="images/collage.jpg" id="indo-food-collage" alt="kumpulan-foto-makanan-Indonesia" width="300px" style="padding:30px 10px">
+		<div>
+		<a href="/items/create" class="new-feature">Add new item</a>
+		<a href="/category" class="new-feature">Manage Category</a>
+		</div>
+	</aside>
+</body>
+</html>

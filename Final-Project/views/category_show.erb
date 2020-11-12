@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoFood</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="<%= URI('category.css') %>"/>
+</head>
+<body>
+	<header>
+		<div class="header-logo">
+			<img id="logo-gofood" src="images/go-food.png" alt="logo gofood" width="30%">
+		</div>
+		<nav>
+            <a href="/menu" >Menu</a> 
+            <a href="/customer">Customer</a> 
+            <a href="/category" class="active">Category</a> 
+            <a href="/order">Order</a>   
+		</nav>        
+	</header>
+
+    <main style="padding-top:20px;">	
+        
+        <% category_details.each do |detail| %>
+            <h1 class="main-header" id="name" value="<%= detail.category_id %>"><%= detail.category_name %></h1>
+            
+            <table>
+            <% if !items.empty? %>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% items.each do |item| %>
+                        <tr>
+                            <td id="name"><%= item.name %></td>
+                            <td id="price">Rp <%= item.price %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+        
+                
+            <% else  %>
+                <div></div>
+            <% end %>
+    <% end %>
+        </table>
+        <br>
+        <a href="/menu" class="home"> Back </a>
+    </main>
+
+</body>
+</html>
