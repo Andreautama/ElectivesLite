@@ -25,8 +25,8 @@ class Categories
 
     def self.get_category_by_category_id(category_id)
         client = create_db_client
-        raw_data = client.query("Select c.category_id, c.category_name, Count(i_c.item_id) item_included from categories c Left join item_category i_c 
-        on c.category_id = i_c.category_id where c.category_id = #{category_id} group by c.category_id, c.category_name;")
+        raw_data = client.query("Select ca.category_id, ca.category_name, Count(i_c.item_id) item_included from categories ca Left join item_category i_c 
+        on ca.category_id = i_c.category_id where ca.category_id = #{category_id} group by ca.category_id, ca.category_name;")
         categories = Array.new
         raw_data.each do |data|
             category = Categories.new({

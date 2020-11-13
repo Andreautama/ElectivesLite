@@ -19,8 +19,11 @@
 	</header>
 
 	<main>
-	<% categories.each do |detail| %>
+	<a href="/cart" class ="cart"> 
+			<h1> &#128722; </h1> </a>
+
 	<h1 class="main-header">Update Category</h1>
+	<% categories.each do |detail| %>
     <form action="/edit-category/<%=detail.category_id %>" method="POST" id="update-category">
 		<fieldset>
             <br>

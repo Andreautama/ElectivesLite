@@ -19,6 +19,9 @@
 	</header>
 
 	<main>
+	<a href="/cart" class ="cart"> 
+	<h1> &#128722; </h1> </a>
+	<br>
 	<h1 class="main-header">List of Categories</h1>
 	
     <table>
@@ -37,8 +40,8 @@
 					
 					<td class="option">
 						<div class="action">
-							<a href="/show-category/<%=category.category_id %>">Show</a> &nbsp;
-							<a href="/edit-category/<%=category.category_id %>">Edit</a> &nbsp;
+							<a href="/show-category/<%=category.category_id %>">Show</a>
+							<a href="/edit-category/<%=category.category_id %>">Edit</a> 
 							</td> 
 						</div>
 					<td><form action="/delete-category/<%=category.category_id %>" method="POST">

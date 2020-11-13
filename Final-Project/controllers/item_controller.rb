@@ -40,9 +40,9 @@ class ItemController
     end
 
     def edit_item(params)
-        item_id = params['item_id'],
-        name = params['item_name'],
-        price = params['item_price'],
+        name = params['item_name']
+        price = params['item_price']
+        item_id = params['item_id']
         category_id = params['item_categories']
         Item.update(name, price, item_id, category_id)
     end

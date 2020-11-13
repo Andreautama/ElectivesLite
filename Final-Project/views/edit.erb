@@ -19,6 +19,8 @@
 	</header>
 
 	<main>
+	<a href="/cart" class ="cart"> 
+		<h1> &#128722; </h1> </a>
 	<h1 class="main-header">Update Menu</h1>
 		<% detail_items.each do |item| %>
 			<form action="/edit/<%= item.item_id %>" method="POST" id="update-menu">

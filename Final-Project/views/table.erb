@@ -20,25 +20,27 @@
 		</nav>        
 	</header>
 	<main>
+		<a href="/cart" class ="cart"> 
+			<h1> &#128722; </h1> </a>
+		<br>
 		<h1 class="main-header">List of Items</h1>
 		<table>
 			<thead>
 				<tr class="header-table">
 					<th>Name</th>
 					<th>Price</th>
-					<th></th>
+					<th class="option"></th>
 				</tr>
 			</thead>
 			<tbody>
 				<% items.each do |item| %>
 				<tr>
 					<td class="data" id="name"><%= item.name %></td>
-					<td class="data" id="price"><%= item.price %></td>
+					<td class="data" id="price">Rp <%= item.price %></td>
 					<div class="action">
 						<td class="option">
-							<a href="/<%= item.item_id %>">Show</a> &nbsp;
-							<a href="/edit/<%= item.item_id %>">Edit</a> &nbsp;
-							<a href="/order>">Cart</a> &nbsp;
+							<a href="/show/<%= item.item_id %>">Show</a> 
+							<a href="/order>">Cart</a> 
 							</td> 
 							
 					</div>

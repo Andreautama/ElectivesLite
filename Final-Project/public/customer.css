@@ -63,7 +63,7 @@ td#phone{
 }
 
 td.option, th.option{
-	width: 50px;
+	width: 42px;
 }
 
 td.option a, .new-feature{
@@ -113,5 +113,7 @@ fieldset{
 	background-color: rgb(239,40,54);
 	color:black;
 }
-
+.cart{
+	float:right;
+}
 

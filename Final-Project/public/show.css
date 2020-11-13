@@ -58,3 +58,6 @@ aside#nasi-goreng{
 	font-weight :bold;
   padding: 5px 5px;
 }
+.cart{
+	float:right;
+}

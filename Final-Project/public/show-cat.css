@@ -47,5 +47,7 @@ td.data{
 	color: black;
 	padding-left: 10px;
 }
-
+.cart{
+	float:right;
+}
 

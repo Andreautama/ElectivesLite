@@ -10,10 +10,10 @@ get '/menu' do
 end
 
 
-# get '/:item_id' do
-#     controller = ItemController.new
-#     controller. show_detail_item(params)
-# end
+get '/show/:item_id' do
+    controller = ItemController.new
+    controller. show_detail_item(params)
+end
 
 get '/items/create' do
     controller = ItemController.new

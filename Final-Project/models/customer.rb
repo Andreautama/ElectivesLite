@@ -26,8 +26,8 @@ class Customer
 
     def self.get_customer_by_customer_id(customer_id)
         client = create_db_client
-        raw_data = client.query(" Select c.customer_id, c.name, c.phone from customer c where
-        c.customer_id = #{customer_id}")
+        raw_data = client.query(" Select cu.customer_id, cu.name, cu.phone from customer cu where
+        cu.customer_id = #{customer_id}")
         customers = Array.new
         raw_data.each do |data|
             customer = Customer.new({

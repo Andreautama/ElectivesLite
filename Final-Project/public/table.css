@@ -39,7 +39,8 @@ aside#indo-food-collage{
 }
 
 .main-header{
-	font-size: 40px;
+	font-size: 30px;
+	padding-top: 20px;
 }
   
 table{
@@ -73,6 +74,12 @@ td.option a, .new-feature{
 	text-align: center;
 	display: inline-block;
 	background-color:#4CAF50;
+}
+td.option, th.option{
+	width: 105px;
+}
+.cart{
+	float:right;
 }
 
 div.action{
